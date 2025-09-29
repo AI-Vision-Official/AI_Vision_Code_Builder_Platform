@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Lunara Vey</title>
+  <style>
+    body { font-family: 'Georgia'; background: #100c1a; color: white; text-align: center; padding: 2em; }
+    img { border-radius: 10px; max-width: 400px; margin: 1em auto; }
+    input, button { margin: 10px; padding: 10px; border-radius: 5px; border: none; }
+    #form-section { background: rgba(255,255,255,0.05); padding: 1em; border-radius: 10px; width: 90%; max-width: 400px; margin: auto; }
+  </style>
+</head>
+<body>
+  <h1>🌙 Welkom bij Lunara Vey</h1>
+  <p>Voel de stem van de sterren... en ontdek jouw pad.</p>
+
+  <img src="lunara.png" alt="Lunara Vey">
+  
+  <div id="form-section">
+    <h2>🔮 Vraag jouw gratis horoscoop aan</h2>
+    <form id="astro-form">
+      <input type="text" placeholder="Voornaam" name="name" required><br>
+      <input type="date" name="birthdate" required><br>
+      <input type="time" name="birthtime"><br>
+      <input type="text" placeholder="Geboorteplaats" name="birthplace"><br>
+      <input type="email" placeholder="E-mail" name="email" required><br>
+      <button type="submit">Verstuur</button>
+    </form>
+    <p id="result"></p>
+  </div>
+
+  <hr style="margin: 3em 0;">
+
+  <h3>💰 Steun Lunara (crypto)</h3>
+  <p>Wil je een reading ondersteunen? Stuur crypto naar:</p>
+  <code>bc1qxxxxxxjouwadreshier</code>
+  <p>Scan met je wallet:</p>
+  <img src="wallet-qr.png" alt="Wallet QR" style="max-width: 200px;">
+
+  <script>
+    document.getElementById('astro-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('result').textContent = "Dank je! Lunara zal jouw sterren bestuderen... Binnenkort ontvang je een e-mail.";
+    });
+  </script>
+</body>
+</html>
